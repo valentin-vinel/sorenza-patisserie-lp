@@ -1,6 +1,33 @@
 ---
 import '../styles/reset.css';
 import '../styles/global.css';
+
+const faqs = [
+  {
+    question: "Qui peut bénéficier de l'accompagnement ?",
+    answer: "Lorem ipsum",
+  },
+  {
+    question: "Le premier rdv est-il gratuit ?",
+    answer: "Lorem ipsum",
+  },
+  {
+    question: "Est-ce que tu coach toutes tes clientes toi même ?",
+    answer: "Lorem ipsum",
+  },
+  {
+    question: "L'accompagnement dure combien de temps ?",
+    answer: "Lorem ipsum",
+  },
+  {
+    question: "Puis-je me faire accompagner si je n'ai pas encore créer mon entreprise ?",
+    answer: "Lorem ipsum",
+  },
+  {
+    question: "Partage tu des ressources ? Des cours, des vidéos ?",
+    answer: "Lorem ipsum",
+  },
+];
 ---
 
 <html lang="fr">
@@ -20,9 +47,11 @@ import '../styles/global.css';
 	<body>
 		<main>
 			<section class="section_hero">
+				<img src="/creme-logo1.png" alt="Logo Crème" class="logo_img" />
 				<h1>OFFRE CRÈME</h1>
-				<p>Fais décoller ton activité de patissière avec un accompagnement personnalisé</p>
-				<p class="promesse">De 0 à +2000€ en 3 mois</p>
+				<p>Fais décoller ton activité de pâtisserie avec un accompagnement personnalisé</p>
+				<p class="promesse">De 0 à +2000€ en 3 mois, une stratégie approuvée !</p>
+				<p class="urgence">3 places par mois seulement !</p>
 	
 				<div class="vsl">
 					<iframe
@@ -33,7 +62,10 @@ import '../styles/global.css';
 					</iframe>
 				</div>
 	
-				<a href="#contact" class="cta">JE PRENDS RDV</a>
+				<a href="#contact" class="cta">
+					<p>JE RÉSERVE MON <br> APPEL DÉCOUVERTE</p>
+					<p class="cta_span">(PLACES LIMITÉES)</p>
+				</a>
 			</section>
 
 			<section class="section_pour-toi">
@@ -91,6 +123,71 @@ import '../styles/global.css';
 					</article>
 				</div>
 			</section>
+
+			<section class="section_temoignage">
+				<h2>Mes clientes parlent de CRÈME :</h2>
+				<article class="temoignage_card">
+					<div class="temoignage_card-title">
+						<img src="https://placehold.co/40x40" alt="Photo cliente" />
+						<h3>Clémence</h3>
+					</div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestiae tenetur itaque incidunt distinctio, quae cum vero aliquid, doloribus iste iure maiores libero minus nesciunt.</p>
+				</article>
+				<article class="temoignage_card">
+					<div class="temoignage_card-title">
+						<img src="https://placehold.co/40x40" alt="Photo cliente" />
+						<h3>Léa</h3>
+					</div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestiae tenetur itaque incidunt distinctio, quae cum vero aliquid, doloribus iste iure maiores libero minus nesciunt.</p>
+				</article>
+				<article class="temoignage_card">
+					<div class="temoignage_card-title">
+						<img src="https://placehold.co/40x40" alt="Photo cliente" />
+						<h3>Aurore</h3>
+					</div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestiae tenetur itaque incidunt distinctio, quae cum vero aliquid, doloribus iste iure maiores libero minus nesciunt.</p>
+				</article>
+			</section>
+
+			<section class="faq" id="faq" aria-labelledby="faq-title">
+				<div class="container">
+					<h2 id="faq-title">F.A.Q.</h2>
+
+					<dl class="faq__list reveal">
+					{faqs.map((faq, i) => (
+						<div class={`faq__item reveal reveal-delay-${(i % 3) + 1}`}>
+						<details class="faq__details">
+							<summary class="faq__question" aria-expanded="false">
+							<span>{faq.question}</span>
+							<span class="faq__icon" aria-hidden="true">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M6 9l6 6 6-6"/>
+								</svg>
+							</span>
+							</summary>
+							<dd class="faq__answer">
+							<p>{faq.answer}</p>
+							</dd>
+						</details>
+						</div>
+					))}
+					</dl>
+				</div>
+			</section>
+
+			<section class="section_calendly" aria-labelledby="faq-title">
+				<div class="container">
+					<h2 id="faq-title">Réserve un créneau, discutons de ton projet</h2>
+
+					<div class="calendly">
+						<p style="text-align: center; font-style: italic; margin-top: 1rem;">Calendly</p>
+					</div>
+				</div>
+			</section>
+
+			<footer class="footer">
+				&copy; 2026 Sorenza Pâtisserie - Tous droits réservés
+			</footer>
 		</main>
 	</body>
 </html>
