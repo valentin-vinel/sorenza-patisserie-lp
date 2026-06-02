@@ -2,6 +2,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .section_hero {
     background-color: #FFF5E9;
     padding: 1rem;
