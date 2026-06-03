@@ -47,25 +47,27 @@ const faqs = [
 	<body>
 		<main>
 			<section class="section_hero">
-				<img src="/creme-logo1.png" alt="Logo Crème" class="logo_img" />
-				<h1>OFFRE CRÈME</h1>
-				<p>Fais décoller ton activité de pâtisserie avec un accompagnement personnalisé</p>
-				<p class="promesse">De 0 à +2000€ en 3 mois, une stratégie approuvée !</p>
-				<p class="urgence">3 places par mois seulement !</p>
-	
-				<div class="vsl">
-					<iframe
-						src="https://www.youtube.com/embed/MBCyczpIn74"
-						style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-						frameborder="0"
-						allowfullscreen>
-					</iframe>
+				<div class="section_hero-container">
+					<img src="/creme-logo1.png" alt="Logo Crème" class="logo_img" />
+					<h1>OFFRE CRÈME</h1>
+					<p class="hero_title">Fais <strong><em>décoller ton activité</em></strong>  de pâtisserie avec un accompagnement personnalisé</p>
+					<p class="promesse">De 0 à +2000€ en 3 mois, une stratégie approuvée !</p>
+					<p class="urgence">3 places par mois seulement !</p>
+		
+					<div class="vsl">
+						<iframe
+							src="https://www.youtube.com/embed/4-bpADHZ34U"
+							style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+							frameborder="0"
+							allowfullscreen>
+						</iframe>
+					</div>
+		
+					<a href="#contact" class="cta">
+						<p>JE RÉSERVE MON <br> APPEL DÉCOUVERTE</p>
+						<p class="cta_span">(PLACES LIMITÉES)</p>
+					</a>
 				</div>
-	
-				<a href="#contact" class="cta">
-					<p>JE RÉSERVE MON <br> APPEL DÉCOUVERTE</p>
-					<p class="cta_span">(PLACES LIMITÉES)</p>
-				</a>
 			</section>
 
 			<section class="section_pour-toi">
@@ -84,7 +86,7 @@ const faqs = [
 			<section class="section_pour-toi-cta">
 				<p>Tu te reconnais ?</p>
 				<p>Alors <span class="span-creme">CRÈME</span> est fait pour toi</p>
-				<a href="#contact" class="cta">JE PRENDS RDV</a>
+				<a href="#contact" class="cta_pour-toi">JE PRENDS RDV</a>
 			</section>
 
 			<section class="section_changement">
@@ -105,7 +107,7 @@ const faqs = [
 
 			<section class="section_resultat">
 				<h2>Les résultats que tu pourrais viser avec CRÈME :</h2>
-				<div class="section_div">
+				<div>
 					<article>
 						<img src="https://placehold.co/200x200" alt="" />
 						<h3>+2000€ de CA mensuel en 2 mois</h3>
@@ -126,27 +128,29 @@ const faqs = [
 
 			<section class="section_temoignage">
 				<h2>Mes clientes parlent de CRÈME :</h2>
-				<article class="temoignage_card">
-					<div class="temoignage_card-title">
-						<img src="https://placehold.co/40x40" alt="Photo cliente" />
-						<h3>Clémence</h3>
-					</div>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestiae tenetur itaque incidunt distinctio, quae cum vero aliquid, doloribus iste iure maiores libero minus nesciunt.</p>
-				</article>
-				<article class="temoignage_card">
-					<div class="temoignage_card-title">
-						<img src="https://placehold.co/40x40" alt="Photo cliente" />
-						<h3>Léa</h3>
-					</div>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestiae tenetur itaque incidunt distinctio, quae cum vero aliquid, doloribus iste iure maiores libero minus nesciunt.</p>
-				</article>
-				<article class="temoignage_card">
-					<div class="temoignage_card-title">
-						<img src="https://placehold.co/40x40" alt="Photo cliente" />
-						<h3>Aurore</h3>
-					</div>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestiae tenetur itaque incidunt distinctio, quae cum vero aliquid, doloribus iste iure maiores libero minus nesciunt.</p>
-				</article>
+				<div class="temoignage_card-div">
+					<article class="temoignage_card">
+						<div class="temoignage_card-title">
+							<img src="https://placehold.co/40x40" alt="Photo cliente" />
+							<h3>Clémence</h3>
+						</div>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestiae tenetur itaque incidunt distinctio, quae cum vero aliquid, doloribus iste iure maiores libero minus nesciunt.</p>
+					</article>
+					<article class="temoignage_card">
+						<div class="temoignage_card-title">
+							<img src="https://placehold.co/40x40" alt="Photo cliente" />
+							<h3>Léa</h3>
+						</div>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestiae tenetur itaque incidunt distinctio, quae cum vero aliquid, doloribus iste iure maiores libero minus nesciunt.</p>
+					</article>
+					<article class="temoignage_card">
+						<div class="temoignage_card-title">
+							<img src="https://placehold.co/40x40" alt="Photo cliente" />
+							<h3>Aurore</h3>
+						</div>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestiae tenetur itaque incidunt distinctio, quae cum vero aliquid, doloribus iste iure maiores libero minus nesciunt.</p>
+					</article>
+				</div>
 			</section>
 
 			<section class="faq" id="faq" aria-labelledby="faq-title">
@@ -177,7 +181,7 @@ const faqs = [
 
 			<section class="section_calendly" aria-labelledby="faq-title" id="contact">
 				<div class="container">
-					<h2 id="faq-title">Réserve un créneau, discutons de ton projet</h2>
+					<h2>Réserve un créneau, discutons de ton projet</h2>
 
 					<div class="calendly">
 						<p style="text-align: center; font-style: italic; margin-top: 1rem;">Calendly</p>
