@@ -1,0 +1,195 @@
+---
+const screens = Array.from({ length: 40 }, (_, i) => `/screens/screen-${i + 1}.PNG`);
+
+const row1 = screens.slice(0, 20);
+const row2 = screens.slice(20, 40);
+---
+
+<section class="marquee-section">
+    <h2>Mes clientes parlent de CRÈME :</h2>
+    <div class="marquee-wrapper">
+        <div class="marquee marquee--right">
+            {[...row1, ...row1].map((src, i) => (
+                <div class="marquee-card">
+                <img src={src} alt={`Témoignage cliente ${i + 1}`} loading="eager" />
+                </div>
+            ))}
+        </div>
+    </div>
+
+    <div class="marquee-wrapper">
+        <div class="marquee marquee--left">
+            {[...row2, ...row2].map((src, i) => (
+                <div class="marquee-card">
+                    <img src={src} alt={`Témoignage cliente ${i + 1}`} loading="eager" />
+                </div>
+            ))}
+        </div>
+    </div>
+
+  <div class="temoignages_video">
+    <p class="temoignages_video-title">... en vidéo également ↓</p>
+    <div class="videos-grid">
+        <div class="video-wrapper">
+        <iframe
+            src="https://www.youtube.com/embed/IBpTKrPWKxc"
+            frameborder="0"
+            allowfullscreen
+        />
+        </div>
+        <div class="video-wrapper">
+        <iframe
+            src="https://www.youtube.com/embed/C2VuO2J8TBI"
+            frameborder="0"
+            allowfullscreen
+        />
+        </div>
+    </div>
+
+    <a href="https://www.youtube.com/@sorenzapatisserietemoignage" target="_blank" class="youtube-link">
+        Voir tous les témoignages →
+    </a>
+    </div>
+</section>
+
+<style>
+  .marquee-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow: hidden;
+    width: 100%;
+    padding: 2rem 0;
+  }
+
+  .marquee-section h2 {
+    font-size: 1.2rem;
+    color: #A47764;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+  .marquee-wrapper {
+    overflow: hidden;
+    width: 100%;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .marquee {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    align-items: center;
+  }
+
+  .marquee--right {
+    animation: scrollRight 90s linear infinite;
+    border-top: 1px solid #8b6656;
+  }
+
+  .marquee--left {
+    animation: scrollLeft 90s linear infinite;
+    border-bottom: 1px solid #8b6656;
+  }
+
+  .marquee-card {
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 300px;
+  }
+
+  .marquee-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+  }
+
+  @keyframes scrollRight {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0%); }
+  }
+
+  @keyframes scrollLeft {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-50%); }
+  }
+
+  .marquee-wrapper:hover .marquee {
+    animation-play-state: paused;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .marquee-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+  }
+
+  .temoignages_video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .temoignages_video-title {
+    color: #8b6656;
+    font-weight: bold;
+    margin: 2rem auto 0 auto;
+    font-size: 1.1rem;
+  }
+
+  .videos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .youtube-link {
+    font-size: 1rem;
+    color: #5a4237;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+
+  .youtube-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  @media (min-width: 768px) {
+    .temoignages_video {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .videos-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

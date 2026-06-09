@@ -1,31 +1,32 @@
 ---
 import '../styles/reset.css';
 import '../styles/global.css';
+import Testimonials from '../components/Testimonials.astro';
 
 const faqs = [
   {
     question: "Qui peut bénéficier de l'accompagnement ?",
-    answer: "Lorem ipsum",
+    answer: "CRÈME s'adresse à toutes les pâtissières. Que tu veuilles lancer ton activité de zéro ou que tu sois déjà lancée mais que ça stagne. Si tu veux vivre de ta pâtisserie, tu es au bon endroit.",
   },
   {
     question: "Le premier rdv est-il gratuit ?",
-    answer: "Lorem ipsum",
+    answer: "Oui, complètement. Le premier appel est un échange gratuit de 30 minutes pour parler de ta situation et voir si CRÈME est fait pour toi. Sans pression, sans engagement.",
   },
   {
     question: "Est-ce que tu coach toutes tes clientes toi même ?",
-    answer: "Lorem ipsum",
+    answer: "Oui, chaque cliente est accompagnée directement par moi. Pas d'assistante, pas de délégation — tu as affaire à Sorenza du début à la fin.",
   },
   {
     question: "L'accompagnement dure combien de temps ?",
-    answer: "Lorem ipsum",
+    answer: "L'accompagnement se déroule sur 3 mois. Et une fois terminé, tu gardes à vie l'accès à la communauté et au live hebdomadaire — parce que le chemin ne s'arrête pas à la fin des 3 mois.",
   },
   {
     question: "Puis-je me faire accompagner si je n'ai pas encore créer mon entreprise ?",
-    answer: "Lorem ipsum",
+    answer: "Tout à fait. On peut même commencer par là. Structurer ton activité dès le départ, c'est justement ce qui t'évite de perdre du temps et de l'énergie plus tard.",
   },
   {
     question: "Partage tu des ressources ? Des cours, des vidéos ?",
-    answer: "Lorem ipsum",
+    answer: "Oui. En plus de l'accompagnement, tu as accès à des ressources concrètes pour avancer entre nos sessions. Cours, vidéos, outils. Tout ce dont tu as besoin pour progresser à ton rythme.",
   },
 ];
 ---
@@ -73,12 +74,12 @@ const faqs = [
 			<section class="section_pour-toi">
 				<h2>Crème est fait pour toi si :</h2>
 				<ul>
-					<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero officiis fugiat libero mollitia dicta, ut dolorum earum tenetur reprehenderit vel distinctio fugit</li>
-					<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem fugit nobis odio, autem minima nam dolor sequi?</li>
-					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quia magni minima reprehenderit debitis placeat vel deserunt</li>
-					<li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem quisquam quis </li>
-					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, vitae rerum facilis quibusdam debitis optio doloremque distinctio. Doloremque officia accusamus</li>
-					<li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores minima repellendus ipsam inventore voluptas quaerat at in!</li>
+					<li>Tu es pâtissière de métier (ou passionnée) et tu veux enfin transformer ton savoir-faire en activité qui te paie vraiment</li>
+					<li>Tu vends déjà de temps en temps, mais les commandes ne sont pas régulières, et cette instabilité t'épuise</li>
+					<li>Tu ne sais pas quoi facturer, et tu as souvent l'impression de brader ton travail</li>
+					<li>Tu as peur du regard des autres, ta famille qui doute, les gens sur les réseaux, les pros qui jugent</li>
+					<li>Tu veux bosser depuis chez toi, sans boutique ni local, et sans dépendre d'un patron</li>
+					<li>Tu es prête à travailler sérieusement, mais tu as besoin d'une méthode claire et de quelqu'un pour t'accompagner pas à pas</li>
 				</ul>
 
 			</section>
@@ -86,22 +87,25 @@ const faqs = [
 			<section class="section_pour-toi-cta">
 				<p>Tu te reconnais ?</p>
 				<p>Alors <span class="span-creme">CRÈME</span> est fait pour toi</p>
-				<a href="#contact" class="cta_pour-toi">JE PRENDS RDV</a>
+				<a href="#contact" class="cta">
+					<p>JE PRENDS RDV</p>
+					<p class="cta_span">(PLACES LIMITÉES)</p>
+				</a>
 			</section>
 
 			<section class="section_changement">
 				<h2>3 choses qui vont TOUT changer pour toi :</h2>
 				<div>
 					<img src="" alt="" />
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis quasi fugiat explicabo voluptates omnis maxime</p>
+					<p>Je vais <strong>écouter</strong> ta situation, <strong>identifier ce qui bloque</strong> ton activité et <strong>définir ensemble les objectifs</strong> qu'on va atteindre pas à pas.</p>
 				</div>
 				<div>
 					<img src="" alt="" />
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis quasi fugiat explicabo voluptates omnis maxime</p>
+					<p>Je vais t'aider à <strong>éviter les erreurs</strong> qui te font perdre du temps et de l'argent pour que tu te concentres uniquement sur <strong>ce qui fonctionne vraiment.</strong></p>
 				</div>
 				<div>
 					<img src="" alt="" />
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis quasi fugiat explicabo voluptates omnis maxime</p>
+					<p>Je vais te <strong>construire un plan d'action concret</strong> pour que tu <strong>stabilises ton chiffre d'affaires</strong> et que tu vives enfin pleinement de ta pâtisserie.</p>
 				</div>
 			</section>
 
@@ -126,32 +130,7 @@ const faqs = [
 				</div>
 			</section>
 
-			<section class="section_temoignage">
-				<h2>Mes clientes parlent de CRÈME :</h2>
-				<div class="temoignage_card-div">
-					<article class="temoignage_card">
-						<div class="temoignage_card-title">
-							<img src="https://placehold.co/40x40" alt="Photo cliente" />
-							<h3>Clémence</h3>
-						</div>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestiae tenetur itaque incidunt distinctio, quae cum vero aliquid, doloribus iste iure maiores libero minus nesciunt.</p>
-					</article>
-					<article class="temoignage_card">
-						<div class="temoignage_card-title">
-							<img src="https://placehold.co/40x40" alt="Photo cliente" />
-							<h3>Léa</h3>
-						</div>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestiae tenetur itaque incidunt distinctio, quae cum vero aliquid, doloribus iste iure maiores libero minus nesciunt.</p>
-					</article>
-					<article class="temoignage_card">
-						<div class="temoignage_card-title">
-							<img src="https://placehold.co/40x40" alt="Photo cliente" />
-							<h3>Aurore</h3>
-						</div>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestiae tenetur itaque incidunt distinctio, quae cum vero aliquid, doloribus iste iure maiores libero minus nesciunt.</p>
-					</article>
-				</div>
-			</section>
+			<Testimonials />
 
 			<section class="faq" id="faq" aria-labelledby="faq-title">
 				<div class="container">

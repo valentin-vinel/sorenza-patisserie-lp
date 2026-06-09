@@ -42,7 +42,7 @@ html {
     border-radius: 6px;
 }
 
-.cta, .cta_pour-toi {
+.cta {
     background-color: #A47764;
     color: white;
     text-decoration: none;
@@ -57,12 +57,12 @@ html {
     line-height: 1.2;
 }
 
-.cta:hover, .cta_pour-toi:hover {
+.cta:hover {
     cursor: pointer;
     box-shadow: 0px 3px 16px 0px #858585;
 }
 
-.cta_span {
+.cta_span, .cta_span-pour-toi {
     font-weight: normal;
     font-size: 0.6rem;
     margin-top: 0.1rem;
@@ -179,43 +179,6 @@ html {
     font-style: italic;
 }
 
-.section_temoignage h2 {
-    font-size: 1.2rem;
-    color: #A47764;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.temoignage_card-div {
-    display: flex;
-    padding: 1rem;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.temoignage_card {
-    border: 2px solid #A47764;
-    padding: 1rem;
-    border-radius: 8px;
-    max-width: 600px;
-    margin: auto;
-}
-
-.temoignage_card-title {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.temoignage_card-title img {
-    border-radius: 40px;
-}
-
-.temoignage_card-title h3 {
-    font-size: 1.1rem;
-}
-
 .faq {
     background-color: #FFF5E9;
     padding: 2rem 1rem;
@@ -235,7 +198,6 @@ html {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-bottom: var(--space-2xl);
 }
 
 .faq__item {
@@ -245,11 +207,6 @@ html {
     padding: 0 0.8rem;
     font-size: 0.9rem;
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
-}
-
-.faq__item:has(.faq__details[open]) {
-    box-shadow: var(--shadow-md);
 }
 
 .faq__details {
@@ -260,16 +217,15 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--space-md);
-    padding: var(--space-lg) var(--space-xl);
+    gap: 10px;
     cursor: pointer;
     font-weight: 600;
-    font-size: var(--text-md);
-    color: var(--color-text);
+    font-size: 1rem;
+    color: #6d5044;
     list-style: none;
     min-height: 60px;
-    transition: color var(--transition), background-color var(--transition);
     user-select: none;
+    padding: 1rem 0;
 }
 
 .faq__question::-webkit-details-marker {
@@ -277,14 +233,12 @@ html {
 }
 
 .faq__details[open] .faq__question {
-    color: var(--color-primary);
-    background-color: rgba(64, 114, 67, 0.04);
+    padding-left: 1rem;
+    background-color: #a4776407;
 }
 
 .faq__icon {
     flex-shrink: 0;
-    color: var(--color-primary);
-    transition: transform var(--transition);
     display: flex;
 }
 
@@ -293,12 +247,11 @@ html {
 }
 
 .faq__answer {
-    padding: var(--space-md) var(--space-xl) var(--space-lg);
-    color: var(--color-text-light);
+    padding: 1rem;
     line-height: 1.8;
-    border-top: 1px solid var(--color-neutral-dark);
-    margin-inline: var(--space-xl);
+    border-top: 1px solid #8b6656;
     padding-inline: 0;
+    font-size: 1rem;
 }
 
 .section_calendly {
@@ -396,10 +349,11 @@ html {
     .section_pour-toi {
         margin: 80px auto 40px auto;
         padding: 60px;
+        max-width: 1200px;
     }
 
     .section_pour-toi h2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         margin-bottom: 40px;
     }
 
@@ -412,12 +366,8 @@ html {
         margin-bottom: 80px;
     }
 
-    .section_pour-toi-cta p {
-        font-size: 1.2rem;
-    }
-
-    .cta_pour-toi {
-        font-size: 1.5rem;
+    .section_pour-toi-cta > p {
+        font-size: 1.3rem;
     }
 
     .section_changement {
@@ -426,13 +376,14 @@ html {
     }
 
     .section_changement h2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         margin-bottom: 20px;
     }
 
     .section_changement div {
         max-width: 800px;
         margin: auto;
+        font-size: 1rem;
     }
 
     .section_resultat {
@@ -440,30 +391,16 @@ html {
     }
 
     .section_resultat h2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         margin-bottom: 20px;
     }
 
     .section_resultat div {
-        flex-direction: row;  
+        flex-direction: row;
     }
 
     .section_resultat div article {
         max-width: 320px;
-    }
-
-    .section_temoignage {
-        margin: 80px auto;
-        padding: 80px;
-    }
-
-    .section_temoignage h2 {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-    }
-
-    .temoignage_card-div {
-        flex-direction: row;
     }
 
     .faq {
@@ -472,7 +409,7 @@ html {
     }
 
     #faq-title {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         margin-bottom: 40px;
     }
 
@@ -482,7 +419,7 @@ html {
     }
 
     .section_calendly h2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         margin-bottom: 20px;
     }
 }
