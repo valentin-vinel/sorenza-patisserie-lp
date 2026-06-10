@@ -170,7 +170,9 @@ html {
 
 .section_resultat div article img {
     margin-bottom: 1rem ;
-
+    max-width: 250px;
+    max-height: 250px;
+    align-self: center;
 }
 
 .section_resultat div article h3 {
