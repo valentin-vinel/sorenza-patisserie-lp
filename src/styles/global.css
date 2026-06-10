@@ -8,14 +8,20 @@ html {
 
 .section_hero {
     background-color: #FFF5E9;
-    padding: 40px;
+    padding: 20px;
     margin-bottom: 80px;
 }
 
 .section_hero h1 {
     color: #8b6656;
     font-size: 1.6rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.hero_title {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
 }
 
 .logo_img {
@@ -160,7 +166,6 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .section_resultat div article img {
